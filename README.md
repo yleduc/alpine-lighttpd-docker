@@ -1,6 +1,6 @@
-# lighthttpd-docker
+# lighttpd-docker
 
-## Just to easily expose folder's content to the world
+### Just to easily expose folder's content to the world
 
 docker build -t lighthttpd .
 
