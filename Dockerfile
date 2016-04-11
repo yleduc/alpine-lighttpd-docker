@@ -9,7 +9,7 @@ RUN lighttpd -t -f /etc/lighttpd/lighttpd.conf
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN echo "hello"
+RUN echo "hello blabla"
 
 ENTRYPOINT ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 
