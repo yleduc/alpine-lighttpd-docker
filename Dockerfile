@@ -1,15 +1,10 @@
-FROM debian:jessie
+FROM alpine:3.3
 
-RUN apt-get update && apt-get install -y lighttpd
+RUN apk add lighttpd
 
 ADD lighttpd.conf /etc/lighttpd/
 
 RUN lighttpd -t -f /etc/lighttpd/lighttpd.conf
-
-# Clean up APT when done.
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-RUN echo "hello"
 
 ENTRYPOINT ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 
