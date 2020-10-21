@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-MAINTAINER Sascha Muellner <smuellner@roland-tilgner.de>
+MAINTAINER Yannick LD <yannick@le-duc.com>
 LABEL version="1.0.0"
 LABEL description="The lighttpd web server exposed on port 80"
 
